@@ -9,8 +9,10 @@ import com.elyeproj.superherotensor.tensorflow.Classifier
 import com.elyeproj.superherotensor.tensorflow.TensorFlowImageClassifier
 import com.wonderkiln.camerakit.CameraKitImage
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.experimental.Job
-import kotlinx.coroutines.experimental.launch
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.GlobalScope;
+import kotlinx.coroutines.Dispatchers;
 
 class MainActivity : AppCompatActivity() {
 
@@ -92,7 +94,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initializeTensorClassifier() {
-        initializeJob = launch {
+        initializeJob = GlobalScope.launch(Dispatchers.Main) {
             try {
                 classifier = TensorFlowImageClassifier.create(
                         assets, MODEL_FILE, LABEL_FILE, INPUT_WIDTH, INPUT_HEIGHT,

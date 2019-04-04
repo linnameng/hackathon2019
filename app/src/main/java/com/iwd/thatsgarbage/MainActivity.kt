@@ -1,12 +1,12 @@
-package com.elyeproj.superherotensor
+package com.iwd.thatsgarbage
 
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
-import com.elyeproj.superherotensor.tensorflow.Classifier
-import com.elyeproj.superherotensor.tensorflow.TensorFlowImageClassifier
+import com.iwd.thatsgarbage.tensorflow.Classifier
+import com.iwd.thatsgarbage.tensorflow.TensorFlowImageClassifier
 import com.wonderkiln.camerakit.CameraKitImage
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Job

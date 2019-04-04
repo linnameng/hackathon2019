@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package com.elyeproj.superherotensor.tensorflow;
+package com.iwd.thatsgarbage.tensorflow;
 
 import android.graphics.Bitmap;
 import android.graphics.RectF;
